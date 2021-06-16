@@ -67,6 +67,7 @@ public:
  * A mode can also be specified as a sequence, by an array 
  * of longs.
  */ 
+
 class Indicator {
 private:
    LEDMode* _ledModes;

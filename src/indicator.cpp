@@ -146,7 +146,11 @@ void LEDMode::addStep(Step *step)
 void LEDMode::reset(const unsigned long now)
 {
     _current = NULL;
-    _last = now - _first->getDuration();
+    _last = 0;
+    if (_first)
+    {
+        _theState = ~_first->getState();
+    }
 }
 
 byte LEDMode::getId()
@@ -218,7 +222,8 @@ boolean Indicator::addMode(LEDMode *mode)
 boolean Indicator::addMode(const byte id, boolean on)
 {
     LEDMode *mode = new LEDMode(_ledModes, id);
-    byte state = _led.idleState == LOW ? on ? HIGH : LOW : on ? LOW : HIGH;
+    byte state = _led.idleState == LOW ? on ? HIGH : LOW : on ? LOW
+                                                              : HIGH;
     mode->addStep(new Step(1000, state));
     return this->addMode(mode);
 }
