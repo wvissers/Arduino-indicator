@@ -3,11 +3,22 @@ This library is intended to facilitate one or more LEDs, used as indicator in sm
 based on ESP8266, ESP32 or Arduino. It is capable of configuring different blinking patterns,
 and selecting them in different parts of the program.
 
-As an example, you cann use it to indicate different operating modes, like setup, normal
-operation and error conditions.
+You can use it e.g. to indicate different operating modes, like setup, normal operation and 
+error conditions.
 
-# Notes
-This is work under construction. Examples will be included soon.
+# Examples
+Some examples are included, to show basic applications of this library:
+
+SimpleBlink 
+   Demonstrates the use of mode selection to indicate different operating modes.
+BlinkStop 
+   Demonstrates that you can have modes with static on and static off states.
+BlinkMorse
+   Demonstrates the use of patterns to send morse code.
+
+# Other uses
+Since this library facilitates setting output pins HIGH or LOW at different patterns, it is
+not limited to use for LEDs only. It is also suited e.g. to produce buzzer patterns.
 
 # Disclaimer
  ***************************************************************************
