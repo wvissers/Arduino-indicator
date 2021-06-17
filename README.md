@@ -1,7 +1,10 @@
 # Arduino-indicator library
-This library is intended to facilitate one or more LEDs, used as indicator to small devices
+This library is intended to facilitate one or more LEDs, used as indicator in small devices
 based on ESP8266, ESP32 or Arduino. It is capable of configuring different blinking patterns,
 and selecting them in different parts of the program.
+
+As an example, you cann use it to indicate different operating modes, like setup, normal
+operation and error conditions.
 
 # Notes
 This is work under construction. Examples will be included soon.
